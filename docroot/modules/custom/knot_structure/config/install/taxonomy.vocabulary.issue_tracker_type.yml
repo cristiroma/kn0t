@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issue tracker type'
+vid: issue_tracker_type
+description: ''
+hierarchy: 0
+weight: 0

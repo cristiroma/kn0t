@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Server stack role'
+vid: server_stack_role
+description: 'A role of a server inside an application stack'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Contract
+vid: contract
+description: 'Financial and legal binding contract'
+hierarchy: 0
+weight: 0

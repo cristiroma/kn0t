@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.server_role.field_sr_role
+    - field.field.paragraph.server_role.field_sr_server
+    - paragraphs.paragraphs_type.server_role
+id: paragraph.server_role.default
+targetEntityType: paragraph
+bundle: server_role
+mode: default
+content:
+  field_sr_role:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sr_server:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

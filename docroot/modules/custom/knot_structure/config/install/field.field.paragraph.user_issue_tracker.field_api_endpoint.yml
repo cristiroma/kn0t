@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_api_endpoint
+    - paragraphs.paragraphs_type.user_issue_tracker
+  module:
+    - link
+id: paragraph.user_issue_tracker.field_api_endpoint
+field_name: field_api_endpoint
+entity_type: paragraph
+bundle: user_issue_tracker
+label: 'API endpoint'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

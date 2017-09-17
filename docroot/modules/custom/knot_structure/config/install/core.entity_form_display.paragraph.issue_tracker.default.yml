@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.issue_tracker.field_issue_tracker_type
+    - field.field.paragraph.issue_tracker.field_url
+    - paragraphs.paragraphs_type.issue_tracker
+  module:
+    - link
+id: paragraph.issue_tracker.default
+targetEntityType: paragraph
+bundle: issue_tracker
+mode: default
+content:
+  field_issue_tracker_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_url:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

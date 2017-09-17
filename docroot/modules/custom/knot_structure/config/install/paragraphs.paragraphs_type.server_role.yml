@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: server_role
+label: 'Server role'
+behavior_plugins: {  }

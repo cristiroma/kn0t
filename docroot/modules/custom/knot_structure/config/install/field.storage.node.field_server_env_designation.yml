@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_server_env_designation
+field_name: field_server_env_designation
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Development
+      label: Development
+    -
+      value: Staging
+      label: Staging
+    -
+      value: Production
+      label: Production
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: issue_tracker
+label: 'Issue tracker'
+behavior_plugins: {  }

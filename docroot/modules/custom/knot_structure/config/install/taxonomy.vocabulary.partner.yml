@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Partner
+vid: partner
+description: 'The list of our partners we are working with'
+hierarchy: 0
+weight: 0

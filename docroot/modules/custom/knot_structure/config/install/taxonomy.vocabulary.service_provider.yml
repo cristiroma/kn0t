@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Service provider'
+vid: service_provider
+description: 'A list of service companies we are working with'
+hierarchy: 0
+weight: 0

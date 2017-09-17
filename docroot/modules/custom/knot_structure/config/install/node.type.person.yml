@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Person
+type: person
+description: 'A person in relation with the company (customer, developer etc.)'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

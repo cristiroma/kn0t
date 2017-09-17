@@ -1,0 +1,17 @@
+name: knot_structure
+description: 'Structure of the knot website'
+type: module
+core: 8.x
+dependencies:
+  - contact
+  - entity_reference_revisions
+  - field
+  - link
+  - node
+  - options
+  - paragraphs
+  - taxonomy
+  - text
+  - user
+  - views
+version: 8.x-1.0

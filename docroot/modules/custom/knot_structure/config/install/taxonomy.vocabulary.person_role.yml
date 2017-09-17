@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person role'
+vid: person_role
+description: 'The role a person can have in relation with the company'
+hierarchy: 0
+weight: 0

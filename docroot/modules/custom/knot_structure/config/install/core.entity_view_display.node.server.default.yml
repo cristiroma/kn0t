@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.server.body
+    - field.field.node.server.field_ip_public_address
+    - field.field.node.server.field_server_env_designation
+    - field.field.node.server.field_server_hosting_provider
+    - field.field.node.server.field_server_os
+    - field.field.node.server.field_virtualization_method
+    - node.type.server
+  module:
+    - options
+    - text
+    - user
+id: node.server.default
+targetEntityType: node
+bundle: server
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ip_public_address:
+    weight: 102
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_server_env_designation:
+    weight: 105
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_server_hosting_provider:
+    weight: 107
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_server_os:
+    weight: 106
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_virtualization_method:
+    weight: 103
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

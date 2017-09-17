@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_contract
+    - node.type.project
+    - taxonomy.vocabulary.contract
+id: node.project.field_project_contract
+field_name: field_project_contract
+entity_type: node
+bundle: project
+label: Contract
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      contract: contract
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

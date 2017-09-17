@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Technology
+vid: technology
+description: 'Software technologies to build projects'
+hierarchy: 0
+weight: 0

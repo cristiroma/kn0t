@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_issue_tracker_type
+    - paragraphs.paragraphs_type.user_issue_tracker
+    - taxonomy.vocabulary.issue_tracker_type
+id: paragraph.user_issue_tracker.field_issue_tracker_type
+field_name: field_issue_tracker_type
+entity_type: paragraph
+bundle: user_issue_tracker
+label: 'Issue tracker type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      issue_tracker_type: issue_tracker_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

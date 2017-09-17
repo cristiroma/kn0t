@@ -1,0 +1,8 @@
+knot.issue_tracker_list:
+  path: '/user/{user}/issues'
+  defaults:
+    _form: '\Drupal\knot\Form\KnotIssuesUserForm'
+    _title: 'Your assigned issues'
+  requirements:
+    _permission: 'access content'
+    user: \d+

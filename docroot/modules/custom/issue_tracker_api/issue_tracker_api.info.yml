@@ -1,0 +1,5 @@
+name: Issue tracker API
+type: module
+description: Adds API support to retrieve data from issue trackers
+core: 8.x
+package: API

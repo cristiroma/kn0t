@@ -1,0 +1,5 @@
+name: Knot
+type: module
+description: Provides core Knot functionalities
+core: 8.x
+package: Other

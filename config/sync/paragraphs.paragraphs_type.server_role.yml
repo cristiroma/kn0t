@@ -1,0 +1,7 @@
+uuid: de8427ad-6773-4838-9cb4-cd8d12b13ef2
+langcode: en
+status: true
+dependencies: {  }
+id: server_role
+label: 'Server role'
+behavior_plugins: {  }

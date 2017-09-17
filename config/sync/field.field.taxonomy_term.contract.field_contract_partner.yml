@@ -1,0 +1,28 @@
+uuid: 0bc5b850-19d2-4c92-a5c6-894ecc447ed3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contract_partner
+    - taxonomy.vocabulary.contract
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.contract.field_contract_partner
+field_name: field_contract_partner
+entity_type: taxonomy_term
+bundle: contract
+label: Partner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      partner: partner
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 406e777b-25e4-4a65-9b62-1c3838f8a73b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ip_public_address
+    - node.type.server
+id: node.server.field_ip_public_address
+field_name: field_ip_public_address
+entity_type: node
+bundle: server
+label: 'Public IP address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

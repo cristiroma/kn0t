@@ -1,0 +1,30 @@
+uuid: 56e501fb-9930-4006-81ae-8c02659feaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.server_role.field_sr_role
+    - field.field.paragraph.server_role.field_sr_server
+    - paragraphs.paragraphs_type.server_role
+id: paragraph.server_role.default
+targetEntityType: paragraph
+bundle: server_role
+mode: default
+content:
+  field_sr_role:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sr_server:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

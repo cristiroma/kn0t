@@ -1,0 +1,37 @@
+uuid: fb1f1b55-0dba-411e-b8a3-09352dafffcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.issue_tracker.field_issue_tracker_type
+    - field.field.paragraph.issue_tracker.field_url
+    - paragraphs.paragraphs_type.issue_tracker
+  module:
+    - link
+id: paragraph.issue_tracker.preview
+targetEntityType: paragraph
+bundle: issue_tracker
+mode: preview
+content:
+  field_issue_tracker_type:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_url:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

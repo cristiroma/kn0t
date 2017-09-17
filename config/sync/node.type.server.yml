@@ -1,0 +1,11 @@
+uuid: 7c6d0138-47c0-451b-8161-832db92c55e2
+langcode: en
+status: true
+dependencies: {  }
+name: Server
+type: server
+description: 'Physical or virtual server that is accessible from the Internet, has an OS installed.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

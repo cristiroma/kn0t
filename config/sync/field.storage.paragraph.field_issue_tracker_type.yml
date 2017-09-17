@@ -1,0 +1,20 @@
+uuid: c65c84eb-0d9a-4171-b233-f4a849c4e8a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_issue_tracker_type
+field_name: field_issue_tracker_type
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

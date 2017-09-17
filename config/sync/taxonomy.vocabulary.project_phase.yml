@@ -1,0 +1,9 @@
+uuid: 8c94cc9c-8c09-423d-9a2d-8fd8ac4e6fd8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project phase'
+vid: project_phase
+description: ''
+hierarchy: 0
+weight: 0

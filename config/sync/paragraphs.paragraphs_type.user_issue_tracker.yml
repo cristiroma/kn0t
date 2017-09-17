@@ -1,0 +1,7 @@
+uuid: 87ea220d-48bc-43a9-8337-f2c173d48de6
+langcode: en
+status: true
+dependencies: {  }
+id: user_issue_tracker
+label: 'User issue tracker'
+behavior_plugins: {  }

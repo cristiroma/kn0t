@@ -1,0 +1,30 @@
+uuid: 6c13bf40-6fcd-4d1e-99d5-54f113f8eaa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website_server_stack
+    - node.type.website
+    - paragraphs.paragraphs_type.server_role
+  module:
+    - entity_reference_revisions
+id: node.website.field_website_server_stack
+field_name: field_website_server_stack
+entity_type: node
+bundle: website
+label: 'Server stack'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      server_role: server_role
+    target_bundles_drag_drop:
+      server_role:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

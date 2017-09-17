@@ -1,0 +1,9 @@
+uuid: d052a959-7832-4fac-b0b6-25ab14bd94c0
+langcode: en
+status: true
+dependencies: {  }
+name: Technology
+vid: technology
+description: 'Software technologies to build projects'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,33 @@
+uuid: d4cda6b5-0266-42db-92f4-11fd48fb27e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_tracker
+    - node.type.project
+    - paragraphs.paragraphs_type.issue_tracker
+  module:
+    - entity_reference_revisions
+id: node.project.field_issue_tracker
+field_name: field_issue_tracker
+entity_type: node
+bundle: project
+label: 'Issue tracker'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      issue_tracker: issue_tracker
+    target_bundles_drag_drop:
+      issue_tracker:
+        enabled: true
+        weight: 3
+      server_role:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

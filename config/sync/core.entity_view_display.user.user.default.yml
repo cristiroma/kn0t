@@ -1,0 +1,16 @@
+uuid: fedd4762-3df9-4ef7-9ecb-a56181d0830a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_issue_trackers
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content: {  }
+hidden:
+  field_issue_trackers: true
+  member_for: true

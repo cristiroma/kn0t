@@ -1,0 +1,19 @@
+uuid: 7f50af9d-67d7-4041-a8b8-1bf39a9b3589
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_source_code_repository
+field_name: field_source_code_repository
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

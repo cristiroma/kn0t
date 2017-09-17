@@ -1,0 +1,9 @@
+uuid: 3f89bdfd-e097-44b4-9a49-f3568c4fa868
+langcode: en
+status: true
+dependencies: {  }
+name: 'Operating system'
+vid: operating_system
+description: 'List of operating system we use to deploy projects'
+hierarchy: 0
+weight: 0

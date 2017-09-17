@@ -1,0 +1,21 @@
+uuid: 5feaba7f-991d-4f07-8e33-8c28a9c78e1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_virtualization_method
+    - node.type.server
+  module:
+    - options
+id: node.server.field_virtualization_method
+field_name: field_virtualization_method
+entity_type: node
+bundle: server
+label: 'Virtualization method'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

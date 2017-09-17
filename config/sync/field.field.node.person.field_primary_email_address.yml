@@ -1,0 +1,19 @@
+uuid: 40681365-437b-4415-9f77-b7115dd79e0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_email_address
+    - node.type.person
+id: node.person.field_primary_email_address
+field_name: field_primary_email_address
+entity_type: node
+bundle: person
+label: 'Primary email address'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

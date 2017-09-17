@@ -1,0 +1,11 @@
+uuid: 97f73227-6e86-4ea7-b717-02fe4fd81b9f
+langcode: en
+status: true
+dependencies: {  }
+name: Website
+type: website
+description: 'Website is an Internet reachable or intranet application built with web technologies under a project, contract - in relation with the company'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

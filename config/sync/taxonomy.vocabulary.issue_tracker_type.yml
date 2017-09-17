@@ -1,0 +1,9 @@
+uuid: 38d0bf3b-8131-4824-89c6-d49e8172c0af
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issue tracker type'
+vid: issue_tracker_type
+description: ''
+hierarchy: 0
+weight: 0

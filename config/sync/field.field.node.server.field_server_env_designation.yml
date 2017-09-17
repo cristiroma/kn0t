@@ -1,0 +1,21 @@
+uuid: a15af465-59f5-4efa-881f-d1a9661ea9cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_server_env_designation
+    - node.type.server
+  module:
+    - options
+id: node.server.field_server_env_designation
+field_name: field_server_env_designation
+entity_type: node
+bundle: server
+label: 'Server environment designation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

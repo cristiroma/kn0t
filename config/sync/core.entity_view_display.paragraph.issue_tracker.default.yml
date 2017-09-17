@@ -1,0 +1,36 @@
+uuid: d14d6c8a-bb99-43a1-997d-84197ec990ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.issue_tracker.field_issue_tracker_type
+    - field.field.paragraph.issue_tracker.field_url
+    - paragraphs.paragraphs_type.issue_tracker
+  module:
+    - link
+id: paragraph.issue_tracker.default
+targetEntityType: paragraph
+bundle: issue_tracker
+mode: default
+content:
+  field_issue_tracker_type:
+    weight: 0
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_url:
+    weight: 1
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

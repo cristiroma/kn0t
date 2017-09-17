@@ -1,0 +1,33 @@
+uuid: b86087cc-64b8-463c-bce3-239c6adf5980
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_virtualization_method
+field_name: field_virtualization_method
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Physical
+      label: Physical
+    -
+      value: VMWare
+      label: VMWare
+    -
+      value: 'Virtual Box'
+      label: 'Virtual Box'
+    -
+      value: KVM
+      label: KVM
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

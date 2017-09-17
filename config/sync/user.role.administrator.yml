@@ -1,0 +1,12 @@
+uuid: 17cbf8f1-7e36-428b-8c16-c1a647f4c157
+langcode: en
+status: true
+dependencies: {  }
+id: administrator
+label: Administrator
+weight: 2
+is_admin: null
+permissions:
+  - 'access devel information'
+  - 'execute php code'
+  - 'switch users'

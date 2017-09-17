@@ -1,0 +1,9 @@
+uuid: dbe0b7dd-879b-488d-857d-44a306e33d6a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Server stack role'
+vid: server_stack_role
+description: 'A role of a server inside an application stack'
+hierarchy: 0
+weight: 0

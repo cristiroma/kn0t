@@ -1,0 +1,9 @@
+uuid: 7997bb55-0a6a-4d0d-8319-dc80d6dd4e16
+langcode: en
+status: true
+dependencies: {  }
+name: Contract
+vid: contract
+description: 'Financial and legal binding contract'
+hierarchy: 0
+weight: 0

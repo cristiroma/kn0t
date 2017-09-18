@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
+    - field.field.node.person.field_account
     - field.field.node.person.field_primary_email_address
     - field.field.node.person.field_telephone
     - node.type.person
@@ -28,6 +29,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_account:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_primary_email_address:
     weight: 1
     settings:

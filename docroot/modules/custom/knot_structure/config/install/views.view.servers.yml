@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_server_os
     - node.type.server
     - taxonomy.vocabulary.operating_system
+    - user.role.administrator
   module:
     - node
     - options
@@ -28,9 +29,10 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
       cache:
         type: tag
         options: {  }
@@ -496,7 +498,7 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_ip_public_address'
         - 'config:field.storage.node.field_server_env_designation'
@@ -515,7 +517,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: 0
+        weight: 50
         context: '0'
         menu_name: admin
     cache_metadata:
@@ -527,7 +529,7 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_ip_public_address'
         - 'config:field.storage.node.field_server_env_designation'

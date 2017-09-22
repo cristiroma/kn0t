@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\issue_tracker_api\impl\Issue;
 use Drupal\issue_tracker_api\IssueTracker\IssueManager;
 use Drupal\user\Entity\User;
 
@@ -94,18 +95,6 @@ class KnotIssuesUserForm extends FormBase {
   }
 
 
-  public function renderIssuesTable(array &$form, FormStateInterface $form_state) {
-    $response = new AjaxResponse();
-    $issues = $this->loadIssuesCache(FALSE);
-    $table = $this->buildIssuesTable($issues);
-    $response->addCommand(new ReplaceCommand(
-      '#edit-issues-table',
-      $table)
-    );
-    return $response;
-  }
-
-
   public function loadIssuesCache($filters = [], $useCache = TRUE) {
     $ret = NULL;
     $cache = \Drupal::cache()->get(__CLASS__);
@@ -137,13 +126,24 @@ class KnotIssuesUserForm extends FormBase {
   }
 
 
-  public function buildIssuesTable(array $issues) {
+  public function buildIssuesTable(array $issues, $sort = []) {
     $ret = [
       '#type' => 'table',
-      '#header' => ['Tracker', 'Project', 'Status', 'Priority', '#', 'Title'],
+      '#header' => [
+        ['data' => $this->t('Tracker')],
+        ['data' => $this->t('Project')],
+        ['data' => $this->t('Status'), 'field' => 'status', 'sort' => 'ASC'],
+        ['data' => $this->t('Priority'), 'field' => 'priority', 'sort' => 'ASC'],
+        '#',
+        ['data' => $this->t('Title')],
+      ],
       '#rows' => [],
     ];
+    $order = tablesort_get_order($ret['#header']);
+    $sort = tablesort_get_sort($ret['#header']);
+
     /** @var \Drupal\issue_tracker_api\IssueInterface $issue */
+    $prioritiesCSS = [2 => 'danger' , 1 => 'warning'];
     foreach($issues as $idx => $issue) {
       $row = [];
       $row[] = $issue->getTrackerName();
@@ -158,7 +158,8 @@ class KnotIssuesUserForm extends FormBase {
         $issue->getTitle(),
         Url::fromUri($issue->getUrl(), ['#attributes' => ['target' => '_blank']])
       );
-      $ret['#rows'][] = $row;
+      $priority = Issue::getPriorityIndex($issue->getPriorityName());
+      $ret['#rows'][] = ['data' => $row, 'class' => [$priority ? $prioritiesCSS[$priority] : '']];
     }
     return $ret;
   }

@@ -21,6 +21,25 @@ class Issue implements IssueInterface {
   private $assigneeName;
 
   /**
+   * @param $priorityName
+   *  Priority label
+   *
+   * @return integer
+   *  Priority index 0 (normal), 1 (high) or 2 (critical)
+   */
+  public static function getPriorityIndex($priorityName) {
+    switch(strtolower($priorityName)) {
+      case 'high':
+        return 1;
+      case 'critical':
+      case 'immediate':
+        return 2;
+      default:
+        return 0;
+    }
+  }
+
+  /**
    * @param mixed $trackerName
    */
   public function setTrackerName($trackerName) {

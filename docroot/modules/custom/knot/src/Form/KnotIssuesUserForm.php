@@ -31,25 +31,66 @@ class KnotIssuesUserForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['refresh'] = [
+    $filters = [
+      'tracker' => $form_state->getValue('tracker'),
+      'project' => $form_state->getValue('project'),
+    ];
+    $form['actions'] = [
       '#type' => 'actions',
       'refresh' => [
-        '#type' => 'submit',
-        '#value' => t('Refresh'),
-        '#suffix' => '<div id="issues-table"></div>',
-        '#ajax' => [
-          'callback' => '::renderIssuesTable',
-          'wrapper' => 'issues-table',
-          'method' => 'replace',
-          'effect' => 'fade',
-        ],
-      ]
+        '#type' => 'button',
+        '#value' => t('Reload'),
+        '#attributes' => ['title' => $this->t('Force reload data from issue trackers')],
+        '#weight' => 100,
+      ],
     ];
-    if ($issues = $this->loadIssuesCache()) {
+    if ($issues = $this->loadIssuesCache($filters)) {
+      $form['filters'] = $this->renderFilters($issues);
       $form['issues-table'] = $this->buildIssuesTable($issues);
       $form['issues-table']['#weight'] = 100;
+      $form['actions']['submit'] = [
+        '#type' => 'button',
+        '#value' => $this->t('Filter'),
+      ];
+      $user = \Drupal::currentUser();
+      $form['actions']['reset'] = [
+        '#type' => 'link',
+        '#title' => $this->t('Reset'),
+        '#url' => Url::fromRoute(
+          'knot.issue_tracker_list',
+          ['user' => $user->id()]
+        ),
+        '#attributes' => ['class' => ['btn', 'btn-default']],
+        '#weight' => 150,
+      ];
     }
     return $form;
+  }
+
+
+  public function renderFilters($issues) {
+    $ret = [];
+    $trackers = [$this->t('-- Select --')];
+    $projects = [$this->t('-- Select --')];
+    /** @var \Drupal\issue_tracker_api\IssueInterface $issue */
+    foreach ($issues as $issue) {
+      $trackers[$issue->getTrackerName()] = $issue->getTrackerName();
+      $projects[$issue->getProjectName()] = $issue->getProjectName();
+    }
+
+    $trackers = array_unique($trackers);
+    $projects = array_unique($projects);
+    $ret['tracker'] = [
+      '#title' => $this->t('Tracker'),
+      '#type' => 'select',
+      '#options' => $trackers
+    ];
+    $ret['project'] = [
+      '#title' => $this->t('Projects'),
+      '#type' => 'select',
+      '#options' => $projects
+    ];
+    return $ret;
   }
 
 
@@ -65,7 +106,7 @@ class KnotIssuesUserForm extends FormBase {
   }
 
 
-  public function loadIssuesCache($useCache = TRUE) {
+  public function loadIssuesCache($filters = [], $useCache = TRUE) {
     $ret = NULL;
     $cache = \Drupal::cache()->get(__CLASS__);
     if (empty($cache) || !$useCache) {
@@ -79,20 +120,36 @@ class KnotIssuesUserForm extends FormBase {
     else {
       $ret = $cache->data;
     }
-    return $ret;
+
+    $filtered = [];
+    // Apply filters
+    /** @var \Drupal\issue_tracker_api\IssueInterface $issue */
+    foreach($ret as $issue) {
+      if (!empty($filters['tracker']) && $issue->getTrackerName() != $filters['tracker']) {
+        continue;
+      }
+      if (!empty($filters['project']) && $issue->getProjectName() != $filters['project']) {
+        continue;
+      }
+      $filtered[] = $issue;
+    }
+    return $filtered;
   }
 
 
   public function buildIssuesTable(array $issues) {
     $ret = [
       '#type' => 'table',
-      '#header' => ['System', '#', 'Title', 'Status', 'Priority'],
+      '#header' => ['Tracker', 'Project', 'Status', 'Priority', '#', 'Title'],
       '#rows' => [],
     ];
     /** @var \Drupal\issue_tracker_api\IssueInterface $issue */
     foreach($issues as $idx => $issue) {
       $row = [];
       $row[] = $issue->getTrackerName();
+      $row[] = $issue->getProjectName();
+      $row[] = $issue->getStatusName();
+      $row[] = $issue->getPriorityName();
       $row[] = Link::fromTextAndUrl(
         $issue->getId(),
         Url::fromUri($issue->getUrl(), ['#attributes' => ['target' => '_blank']])
@@ -101,8 +158,6 @@ class KnotIssuesUserForm extends FormBase {
         $issue->getTitle(),
         Url::fromUri($issue->getUrl(), ['#attributes' => ['target' => '_blank']])
       );
-      $row[] = $issue->getStatusName();
-      $row[] = $issue->getPriorityName();
       $ret['#rows'][] = $row;
     }
     return $ret;

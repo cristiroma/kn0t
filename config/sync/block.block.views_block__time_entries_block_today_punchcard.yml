@@ -1,0 +1,31 @@
+uuid: e548ac19-58ff-4704-851c-4f2b81d52975
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.time_entries
+  module:
+    - system
+    - views
+  theme:
+    - okiu
+id: views_block__time_entries_block_today_punchcard
+theme: okiu
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:time_entries-block_today_punchcard'
+settings:
+  id: 'views_block:time_entries-block_today_punchcard'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: 'user/*'
+    negate: false
+    context_mapping: {  }

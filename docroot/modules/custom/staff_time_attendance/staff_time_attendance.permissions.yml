@@ -1,0 +1,25 @@
+view own time entry entity:
+  title: 'View own time entry entity'
+
+view any time entry entity:
+  title: 'View any time entry entity'
+
+add time entry entity:
+  title: 'Add staff entry entity'
+
+edit own staff time entry entity:
+  title: 'Edit own staff entry entity'
+
+edit any staff time entry entity:
+  title: 'Edit any staff entry entity'
+
+delete own time entry entity:
+  title: 'Delete own entry entity'
+
+delete any time entry entity:
+  title: 'Delete any entry entity'
+
+administer time entry system:
+  title: 'Administer time entry system'
+  restrict access: TRUE
+

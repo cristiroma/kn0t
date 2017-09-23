@@ -1,0 +1,47 @@
+entity.staff_time_entry.canonical:
+  path: '/staff_time_entry/{staff_time_entry}'
+  defaults:
+    _entity_view: 'staff_time_entry'
+    _title: 'Time entry'
+  requirements:
+    _entity_access: 'staff_time_entry.view'
+
+entity.staff_time_entry.collection:
+  path: '/time/list'
+  defaults:
+    _entity_list: 'staff_time_entry'
+    _title: 'Time entries'
+  requirements:
+    _permission: 'administer time entry system'
+
+staff_time_entry.add:
+  path: '/time/add'
+  defaults:
+    _entity_form: staff_time_entry.add
+    _title: 'Add time entry'
+  requirements:
+    _entity_create_access: 'staff_time_entry'
+
+entity.staff_time_entry.edit_form:
+  path: '/time/{staff_time_entry}/edit'
+  defaults:
+    _entity_form: staff_time_entry.edit
+    _title: 'Edit time entry'
+  requirements:
+    _entity_access: 'staff_time_entry.edit'
+
+entity.staff_time_entry.delete_form:
+  path: '/time/{staff_time_entry}/delete'
+  defaults:
+    _entity_form: staff_time_entry.delete
+    _title: 'Delete time entry'
+  requirements:
+    _entity_access: 'staff_time_entry.delete'
+
+#staff_time_entry.settings:
+#  path: 'admin/config/people/staff-time-attendance'
+#  defaults:
+#    _form: '\Drupal\content_entity_example\Form\ContactSettingsForm'
+#    _title: 'Contact Settings'
+#  requirements:
+#    _permission: 'administer contact entity'

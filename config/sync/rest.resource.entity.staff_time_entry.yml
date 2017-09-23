@@ -1,0 +1,19 @@
+uuid: c2f64bd5-5fc5-4e87-9602-718957f1b46f
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - staff_time_attendance
+id: entity.staff_time_entry
+plugin_id: 'entity:staff_time_entry'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth

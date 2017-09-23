@@ -8,8 +8,8 @@ dependencies:
     - okiu
 id: okiu_breadcrumbs
 theme: okiu
-region: navigation
-weight: -2
+region: header
+weight: -3
 provider: null
 plugin: system_breadcrumb_block
 settings:

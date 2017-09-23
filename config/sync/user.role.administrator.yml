@@ -66,6 +66,7 @@ permissions:
   - 'revert server revisions'
   - 'revert website revisions'
   - 'switch users'
+  - 'use text format full_html'
   - 'view person revisions'
   - 'view project revisions'
   - 'view server revisions'

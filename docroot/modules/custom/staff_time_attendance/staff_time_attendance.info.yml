@@ -1,0 +1,5 @@
+name: Staff time attendance
+type: module
+description: 'Staff time and attendance (TNA) module for Drupal 8 to keep records for entrance and exit'
+package: custom
+core: 8.x

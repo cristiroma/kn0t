@@ -1,0 +1,8 @@
+uuid: 22e566a7-b32a-46fa-91c8-14254e72f72f
+langcode: en
+status: true
+dependencies: {  }
+id: european_time
+label: 'European time'
+locked: false
+pattern: 'd/m/Y - H:i:s'

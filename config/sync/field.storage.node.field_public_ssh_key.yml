@@ -1,16 +1,15 @@
-uuid: 772bc788-a4d5-4ed0-8dd5-dfcd22ccaccf
+uuid: 94ac4495-f381-44ea-9019-1573321cd355
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_project_owner
-field_name: field_project_owner
+id: node.field_public_ssh_key
+field_name: field_public_ssh_key
 entity_type: node
-type: entity_reference
+type: string_long
 settings:
-  target_type: taxonomy_term
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

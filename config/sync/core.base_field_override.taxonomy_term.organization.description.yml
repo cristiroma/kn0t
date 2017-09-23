@@ -1,0 +1,20 @@
+uuid: 6049c79e-bd72-48b4-aa0c-8995dbd9af83
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization
+  module:
+    - text
+id: taxonomy_term.organization.description
+field_name: description
+entity_type: taxonomy_term
+bundle: organization
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

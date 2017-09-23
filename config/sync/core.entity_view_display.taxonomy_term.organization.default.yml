@@ -1,0 +1,54 @@
+uuid: d3814f1b-dd83-4db1-a99d-4645fc5fb5ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.organization.field_address
+    - field.field.taxonomy_term.organization.field_is_business_owner
+    - field.field.taxonomy_term.organization.field_logo
+    - field.field.taxonomy_term.organization.field_telephone_number
+    - image.style.medium
+    - taxonomy.vocabulary.organization
+  module:
+    - image
+    - telephone
+    - text
+id: taxonomy_term.organization.default
+targetEntityType: taxonomy_term
+bundle: organization
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_telephone_number:
+    weight: 1
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden:
+  field_is_business_owner: true
+  langcode: true

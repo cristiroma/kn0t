@@ -1,15 +1,15 @@
-uuid: c59d51cb-99f3-4cd1-9570-d1ff14620af0
+uuid: b472fc42-a848-4503-8500-bcca69063885
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_contract_partner
-field_name: field_contract_partner
+id: taxonomy_term.field_address
+field_name: field_address
 entity_type: taxonomy_term
-type: entity_reference
+type: string_long
 settings:
-  target_type: taxonomy_term
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

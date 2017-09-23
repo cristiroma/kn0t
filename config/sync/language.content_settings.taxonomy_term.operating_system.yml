@@ -1,0 +1,16 @@
+uuid: 0e700109-f120-43c0-9d6f-bf0edf7a4541
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.operating_system
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.operating_system
+target_entity_type_id: taxonomy_term
+target_bundle: operating_system
+default_langcode: site_default
+language_alterable: false

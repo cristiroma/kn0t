@@ -1,11 +1,18 @@
 uuid: c4042de4-29f7-4122-8a24-c5f886299897
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: Project
 type: project
 description: 'A project is a piece of software or enterprise developed under a framework, individual or other types of legally binding contracts.'
 help: ''
 new_revision: true
 preview_mode: 0
-display_submitted: true
+display_submitted: false

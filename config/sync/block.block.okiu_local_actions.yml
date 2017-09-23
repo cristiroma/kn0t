@@ -1,0 +1,20 @@
+uuid: 792ec9a7-fa2e-4ef7-8235-902f21e75a47
+langcode: en
+status: true
+dependencies:
+  theme:
+    - okiu
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: okiu_local_actions
+theme: okiu
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: 754a0f1a-7e86-476c-89e9-955718297686
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.issue_tracker_type
+id: taxonomy_term.issue_tracker_type.name
+field_name: name
+entity_type: taxonomy_term
+bundle: issue_tracker_type
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

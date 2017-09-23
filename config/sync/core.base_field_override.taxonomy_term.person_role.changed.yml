@@ -1,0 +1,18 @@
+uuid: 0af22d3b-86c7-40fa-8f36-970555e9a2aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.person_role
+id: taxonomy_term.person_role.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: person_role
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,18 @@
+uuid: 792a9e8a-77f5-4cd5-8690-17003c1b78e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.contract
+id: taxonomy_term.contract.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: contract
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

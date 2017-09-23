@@ -1,0 +1,16 @@
+uuid: 30c657c8-c351-4600-9f3c-8a45644d0432
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.contract
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.contract
+target_entity_type_id: taxonomy_term
+target_bundle: contract
+default_langcode: site_default
+language_alterable: false

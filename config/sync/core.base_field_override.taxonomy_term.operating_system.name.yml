@@ -1,0 +1,18 @@
+uuid: acf5df22-a528-41ae-abaa-d11a849ef4ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.operating_system
+id: taxonomy_term.operating_system.name
+field_name: name
+entity_type: taxonomy_term
+bundle: operating_system
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

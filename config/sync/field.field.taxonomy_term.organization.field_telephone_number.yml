@@ -1,0 +1,21 @@
+uuid: 22363af0-efe8-4651-a958-8929232d11ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_telephone_number
+    - taxonomy.vocabulary.organization
+  module:
+    - telephone
+id: taxonomy_term.organization.field_telephone_number
+field_name: field_telephone_number
+entity_type: taxonomy_term
+bundle: organization
+label: 'Telephone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,17 +1,17 @@
-uuid: 0bc5b850-19d2-4c92-a5c6-894ecc447ed3
+uuid: 49331c4d-c23c-4b69-8213-64c8c72316bd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_contract_partner
+    - field.storage.taxonomy_term.field_customer
     - taxonomy.vocabulary.contract
-    - taxonomy.vocabulary.partner
-id: taxonomy_term.contract.field_contract_partner
-field_name: field_contract_partner
+    - taxonomy.vocabulary.organization
+id: taxonomy_term.contract.field_customer
+field_name: field_customer
 entity_type: taxonomy_term
 bundle: contract
-label: Partner
-description: ''
+label: Customer
+description: 'Owner of the contract'
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      partner: partner
+      organization: organization
     sort:
       field: _none
     auto_create: false

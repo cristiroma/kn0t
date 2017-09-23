@@ -4,10 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
+    - field.field.node.person.field_account
+    - field.field.node.person.field_email_alternative
+    - field.field.node.person.field_image
     - field.field.node.person.field_primary_email_address
+    - field.field.node.person.field_public_ssh_key
+    - field.field.node.person.field_skype
     - field.field.node.person.field_telephone
     - node.type.person
   module:
+    - image
     - text
     - user
 id: node.person.default
@@ -22,12 +28,51 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_account:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_email_alternative:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image:
+    weight: 108
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_primary_email_address:
     weight: 102
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_public_ssh_key:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_skype:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_telephone:
     weight: 103
@@ -42,4 +87,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true

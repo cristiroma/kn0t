@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.website.body
+    - field.field.node.website.field_url
+    - field.field.node.website.field_website_project
+    - field.field.node.website.field_website_server_stack
     - node.type.website
   module:
     - text
@@ -25,4 +28,8 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_url: true
+  field_website_project: true
+  field_website_server_stack: true
+  langcode: true

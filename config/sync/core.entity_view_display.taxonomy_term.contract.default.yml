@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.contract.field_contract_number
-    - field.field.taxonomy_term.contract.field_contract_partner
+    - field.field.taxonomy_term.contract.field_customer
+    - field.field.taxonomy_term.contract.field_date
     - taxonomy.vocabulary.contract
   module:
+    - datetime_range
     - text
 id: taxonomy_term.contract.default
 targetEntityType: taxonomy_term
@@ -22,18 +24,29 @@ content:
     third_party_settings: {  }
   field_contract_number:
     weight: 1
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_contract_partner:
+  field_customer:
     weight: 2
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-hidden: {  }
+  field_date:
+    weight: 3
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: european_date
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+hidden:
+  langcode: true

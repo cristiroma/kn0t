@@ -1,0 +1,23 @@
+uuid: 5cb190fb-9660-4792-b69f-1338abb08dbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_is_business_owner
+    - taxonomy.vocabulary.organization
+id: taxonomy_term.organization.field_is_business_owner
+field_name: field_is_business_owner
+entity_type: taxonomy_term
+bundle: organization
+label: 'Business owner'
+description: 'This is the company that owns this platform. Used to filter out certain screens and identify relationships. (i.e. Eau de Web)'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

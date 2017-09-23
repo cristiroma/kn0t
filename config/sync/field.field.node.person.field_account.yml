@@ -1,0 +1,28 @@
+uuid: 1dd3d606-fa6e-4441-9501-e7397fcddb85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_account
+    - node.type.person
+id: node.person.field_account
+field_name: field_account
+entity_type: node
+bundle: person
+label: Account
+description: 'User''s linked account if available'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

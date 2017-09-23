@@ -1,0 +1,22 @@
+uuid: db04dbe7-08c2-451a-b759-7e4dfb05adbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.server
+id: node.server.status
+field_name: status
+entity_type: node
+bundle: server
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

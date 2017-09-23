@@ -1,0 +1,18 @@
+uuid: db266739-83f8-42d8-b2ea-412d8988f4ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.service_provider
+id: taxonomy_term.service_provider.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: service_provider
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

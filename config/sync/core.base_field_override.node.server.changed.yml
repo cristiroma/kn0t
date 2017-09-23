@@ -1,0 +1,18 @@
+uuid: 22a8cb78-2e23-49eb-871f-c9236c0dd081
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.server
+id: node.server.changed
+field_name: changed
+entity_type: node
+bundle: server
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

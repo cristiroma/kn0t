@@ -1,0 +1,27 @@
+uuid: 354b1673-f021-4cfa-8189-fe643ab5c38f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file
+    - paragraphs.paragraphs_type.document
+  module:
+    - file
+id: paragraph.document.field_file
+field_name: field_file
+entity_type: paragraph
+bundle: document
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: document
+  file_extensions: 'txt pdf doc docx odt xls xlsx ods'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

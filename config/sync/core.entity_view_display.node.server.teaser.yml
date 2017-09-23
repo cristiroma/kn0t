@@ -5,6 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.server.body
+    - field.field.node.server.field_ip_public_address
+    - field.field.node.server.field_server_env_designation
+    - field.field.node.server.field_server_hosting_provider
+    - field.field.node.server.field_server_os
+    - field.field.node.server.field_virtualization_method
     - node.type.server
   module:
     - text
@@ -25,4 +30,10 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_ip_public_address: true
+  field_server_env_designation: true
+  field_server_hosting_provider: true
+  field_server_os: true
+  field_virtualization_method: true
+  langcode: true

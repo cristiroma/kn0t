@@ -13,4 +13,5 @@ mode: default
 content: {  }
 hidden:
   field_issue_trackers: true
+  langcode: true
   member_for: true

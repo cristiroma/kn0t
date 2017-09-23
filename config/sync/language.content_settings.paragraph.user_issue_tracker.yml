@@ -1,0 +1,16 @@
+uuid: 1d329aeb-029f-4a39-90ab-a18e23236486
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.user_issue_tracker
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: paragraph.user_issue_tracker
+target_entity_type_id: paragraph
+target_bundle: user_issue_tracker
+default_langcode: site_default
+language_alterable: false

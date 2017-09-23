@@ -1,0 +1,20 @@
+uuid: da955be8-3dbb-468e-aede-72e5e9da5e7f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - okiu
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: okiu_page_title
+theme: okiu
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

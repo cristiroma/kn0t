@@ -1,9 +1,0 @@
-uuid: f6cb4738-6cfc-4aab-b600-c7640b97a082
-langcode: en
-status: true
-dependencies: {  }
-name: Partner
-vid: partner
-description: 'The list of our partners we are working with'
-hierarchy: 0
-weight: 0

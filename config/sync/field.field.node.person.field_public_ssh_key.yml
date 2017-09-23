@@ -1,0 +1,19 @@
+uuid: c4c9cb62-3fb4-4346-89ef-ad7d89890d74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_ssh_key
+    - node.type.person
+id: node.person.field_public_ssh_key
+field_name: field_public_ssh_key
+entity_type: node
+bundle: person
+label: 'Public SSH key'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

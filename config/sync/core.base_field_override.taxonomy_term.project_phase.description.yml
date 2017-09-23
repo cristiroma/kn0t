@@ -1,0 +1,20 @@
+uuid: f4184dd1-ba18-454d-82b3-d9643d8a5917
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_phase
+  module:
+    - text
+id: taxonomy_term.project_phase.description
+field_name: description
+entity_type: taxonomy_term
+bundle: project_phase
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

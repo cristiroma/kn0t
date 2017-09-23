@@ -5,6 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.project.body
+    - field.field.node.project.field_issue_tracker
+    - field.field.node.project.field_project_contract
+    - field.field.node.project.field_project_phase
+    - field.field.node.project.field_source_code_repository
+    - field.field.node.project.field_url
     - node.type.project
   module:
     - text
@@ -25,4 +30,10 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_issue_tracker: true
+  field_project_contract: true
+  field_project_phase: true
+  field_source_code_repository: true
+  field_url: true
+  langcode: true

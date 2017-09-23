@@ -1,0 +1,9 @@
+uuid: 773132f7-4d85-4317-b03e-a0aca55ab0e2
+langcode: en
+status: true
+dependencies: {  }
+name: Organization
+vid: organization
+description: 'Companies, Institutions or other type of partners involved in business'
+hierarchy: 0
+weight: 0

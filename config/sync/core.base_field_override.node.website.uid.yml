@@ -1,0 +1,20 @@
+uuid: ed47d71b-e151-4b71-b973-9bdc32e69b68
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.website
+id: node.website.uid
+field_name: uid
+entity_type: node
+bundle: website
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

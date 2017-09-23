@@ -1,0 +1,16 @@
+uuid: db18aa9d-a584-424b-8f1a-33c10709a5cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.issue_tracker
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: paragraph.issue_tracker
+target_entity_type_id: paragraph
+target_bundle: issue_tracker
+default_langcode: site_default
+language_alterable: false

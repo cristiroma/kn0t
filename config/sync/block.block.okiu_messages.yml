@@ -1,0 +1,22 @@
+uuid: fa98e0fb-5d71-446f-8cea-7bdfd1260e87
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - okiu
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: okiu_messages
+theme: okiu
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

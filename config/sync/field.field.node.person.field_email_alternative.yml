@@ -1,0 +1,19 @@
+uuid: 5f11d327-d535-4d78-9942-a0b1a72cc228
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_alternative
+    - node.type.person
+id: node.person.field_email_alternative
+field_name: field_email_alternative
+entity_type: node
+bundle: person
+label: 'Alternative email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

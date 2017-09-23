@@ -1,0 +1,18 @@
+uuid: 5c7b996e-9513-496d-b273-3cafa590f0f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.server_stack_role
+id: taxonomy_term.server_stack_role.name
+field_name: name
+entity_type: taxonomy_term
+bundle: server_stack_role
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

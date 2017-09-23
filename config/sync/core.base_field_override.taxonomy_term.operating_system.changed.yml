@@ -1,0 +1,18 @@
+uuid: f45130fe-cd07-4020-a801-119f443e0931
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.operating_system
+id: taxonomy_term.operating_system.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: operating_system
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,20 @@
+uuid: de83c554-8860-4492-8ada-6356648b797b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.person_role
+  module:
+    - text
+id: taxonomy_term.person_role.description
+field_name: description
+entity_type: taxonomy_term
+bundle: person_role
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

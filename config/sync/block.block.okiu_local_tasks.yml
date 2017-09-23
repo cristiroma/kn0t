@@ -1,0 +1,22 @@
+uuid: c795f5fc-03a6-47a0-8d08-75883fb59bd6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - okiu
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: okiu_local_tasks
+theme: okiu
+region: content
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

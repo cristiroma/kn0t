@@ -1,0 +1,31 @@
+uuid: 6c7f65f2-3d67-4427-ab31-ab5bb42babc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - system
+    - views
+  theme:
+    - okiu
+id: views_block__projects_contract_projects
+theme: okiu
+region: sidebar_second
+weight: -3
+provider: null
+plugin: 'views_block:projects-contract_projects'
+settings:
+  id: 'views_block:projects-contract_projects'
+  label: Projects
+  provider: views
+  label_display: visible
+  views_label: Projects
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/taxonomy/term/*'
+    negate: false
+    context_mapping: {  }

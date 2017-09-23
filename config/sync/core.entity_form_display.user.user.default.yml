@@ -36,4 +36,5 @@ content:
   timezone:
     weight: 6
     region: content
-hidden: {  }
+hidden:
+  langcode: true

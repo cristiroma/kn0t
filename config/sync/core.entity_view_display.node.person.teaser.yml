@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.person.body
+    - field.field.node.person.field_account
+    - field.field.node.person.field_primary_email_address
+    - field.field.node.person.field_telephone
     - node.type.person
   module:
     - text
@@ -25,4 +28,8 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_account: true
+  field_primary_email_address: true
+  field_telephone: true
+  langcode: true

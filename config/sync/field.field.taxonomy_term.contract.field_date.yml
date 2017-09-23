@@ -1,0 +1,26 @@
+uuid: 8956f25e-1f5e-49a3-b904-ddf418a5786e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date
+    - taxonomy.vocabulary.contract
+  module:
+    - datetime_range
+id: taxonomy_term.contract.field_date
+field_name: field_date
+entity_type: taxonomy_term
+bundle: contract
+label: Date
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: relative
+    default_end_date: '+1 year'
+default_value_callback: ''
+settings: {  }
+field_type: daterange

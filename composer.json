@@ -25,6 +25,7 @@
         "drupal/features": "^3.5",
         "drupal/paragraphs": "^1.1",
         "drupal/restui": "^1.15",
+        "drupal/token": "^1.0",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"
     },

@@ -1,0 +1,6 @@
+issue_tracker_api.issue_tracker_tab:
+  title: Issues
+  description: Show a new tab with user's issues
+  route_name: issue_tracker_api.issue_tracker_list
+  base_route: entity.user.canonical
+  weight: 100

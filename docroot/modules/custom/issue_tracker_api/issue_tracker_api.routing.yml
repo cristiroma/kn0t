@@ -1,0 +1,8 @@
+issue_tracker_api.issue_tracker_list:
+  path: '/user/{user}/issues'
+  defaults:
+    _form: '\Drupal\issue_tracker_api\Form\UserIssuesForm'
+    _title: 'Your issues'
+  requirements:
+    _permission: 'access content'
+    user: \d+

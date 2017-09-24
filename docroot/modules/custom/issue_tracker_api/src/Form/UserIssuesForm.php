@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\knot\Form;
+namespace Drupal\issue_tracker_api\Form;
 
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\ReplaceCommand;
@@ -17,7 +17,7 @@ use Drupal\user\Entity\User;
  *
  * @package Drupal\mymodule\Form
  */
-class KnotIssuesUserForm extends FormBase {
+class UserIssuesForm extends FormBase {
 
 
   /**
@@ -58,7 +58,7 @@ class KnotIssuesUserForm extends FormBase {
         '#type' => 'link',
         '#title' => $this->t('Reset'),
         '#url' => Url::fromRoute(
-          'knot.issue_tracker_list',
+          'issue_tracker_api.issue_tracker_list',
           ['user' => $user->id()]
         ),
         '#attributes' => ['class' => ['btn', 'btn-default']],

@@ -1,0 +1,6 @@
+staff_time_attendance.timeentries_user_form:
+  title: Timecard
+  description: Show a new tab with user's time entries
+  route_name: staff_time_attendance.timeentries_user_form
+  base_route: entity.user.canonical
+  weight: 150

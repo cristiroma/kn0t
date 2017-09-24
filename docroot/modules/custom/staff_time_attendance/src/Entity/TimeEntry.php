@@ -100,6 +100,13 @@ class TimeEntry extends ContentEntityBase implements TimeEntryInterface {
       ->setTranslatable(FALSE)
       ->setDescription(t('The time that the entity was created.'));
 
+    // Standard field, used as unique if primary index.
+    $fields['reason'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Reason'))
+      ->setRequired(FALSE)
+      ->setTranslatable(FALSE)
+      ->setDescription(t('Time entry reason'));
+
     // Who edited this time record.
     // Entity reference field, holds the reference to the user object.
     // The view shows the user name field of the user.

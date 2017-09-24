@@ -45,3 +45,13 @@ entity.staff_time_entry.delete_form:
 #    _title: 'Contact Settings'
 #  requirements:
 #    _permission: 'administer contact entity'
+
+
+staff_time_attendance.timeentries_user_form:
+  path: '/user/{user}/time'
+  defaults:
+    _form: '\Drupal\staff_time_attendance\Form\TimeEntriesUserForm'
+    _title: 'Timecard'
+  requirements:
+    _permission: 'access content'
+    user: \d+
